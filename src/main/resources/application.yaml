@@ -7,17 +7,17 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: USER-SERVICE
+        - id: user-service
           uri: lb://USER-SERVICE
           predicates:
             - Path=/api/users/*
 
-        - id: HOTEL-SERVICE
+        - id: hotel-service
           uri: lb://HOTEL-SERVICE
           predicates:
             - Path=/api/hotels/**
 
-        - id: QUALIFIER-SERVICE
+        - id: qualifier-service
           uri: lb://QUALIFIER-SERVICE
           predicates:
             - Path=/api/qualifications/**
